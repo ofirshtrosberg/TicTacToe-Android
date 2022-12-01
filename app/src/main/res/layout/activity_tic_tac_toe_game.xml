@@ -147,7 +147,7 @@
         app:srcCompat="@drawable/empty" />
 
     <Button
-        android:id="@+id/game_newgame_btn"
+        android:id="@+id/game_new_game_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"

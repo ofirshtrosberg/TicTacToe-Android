@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class TicTacToeGameActivity extends AppCompatActivity {
@@ -29,14 +30,26 @@ public class TicTacToeGameActivity extends AppCompatActivity {
                 if(turn==0){
                     img.setImageResource(R.drawable.x);
                     game_who_play_or_win_img.setImageResource(R.drawable.oplay);
+                    img.setClickable(false);
                     turn=1;
                 }
                 else{
                     img.setImageResource(R.drawable.o);
                     game_who_play_or_win_img.setImageResource(R.drawable.xplay);
+                    img.setClickable(false);
                     turn = 0;
                 }
             });
         }
+        Button game_new_game_btn = findViewById(R.id.game_new_game_btn);
+        game_new_game_btn.setOnClickListener(view -> {
+            for(ImageView img: imageViews) {
+                img.setClickable(true);
+                img.setImageResource(R.drawable.empty);
+            }
+            game_who_play_or_win_img.setImageResource(R.drawable.xplay);
+            turn=0;
+        });
+
     }
 }
