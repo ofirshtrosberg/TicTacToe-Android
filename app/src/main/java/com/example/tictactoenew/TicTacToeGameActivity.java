@@ -63,7 +63,7 @@ public class TicTacToeGameActivity extends AppCompatActivity {
                 game_img_row1_col2, game_img_row1_col3, game_img_row2_col1, game_img_row2_col2, game_img_row2_col3, game_img_row3_col1, game_img_row3_col2, game_img_row3_col3};
         ImageView game_who_play_or_win_img = findViewById(R.id.game_who_play_or_win_img);
         ImageView game_mark = findViewById(R.id.game_mark);
-
+        game_who_play_or_win_img.setImageResource(R.drawable.xplay);
         for (ImageView img : imageViews) {
             img.setOnClickListener(view -> {
                 if (turn == 0) {
@@ -173,5 +173,3 @@ public class TicTacToeGameActivity extends AppCompatActivity {
         });
     }
 }
-
-
