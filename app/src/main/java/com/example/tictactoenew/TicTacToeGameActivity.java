@@ -102,6 +102,9 @@ public class TicTacToeGameActivity extends AppCompatActivity {
                                 break;
                         }
                         game_who_play_or_win_img.setImageResource(R.drawable.xwin);
+                        for (ImageView image : imageViews) {
+                            image.setClickable(false);
+                        }
                     } else {
                         noOneWin();
                         if(noWin==true)
@@ -148,6 +151,9 @@ public class TicTacToeGameActivity extends AppCompatActivity {
                                 break;
                         }
                         game_who_play_or_win_img.setImageResource(R.drawable.owin);
+                        for (ImageView image : imageViews) {
+                            image.setClickable(false);
+                        }
                     } else {
                         game_who_play_or_win_img.setImageResource(R.drawable.xplay);
                         img.setClickable(false);
